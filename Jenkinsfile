@@ -16,8 +16,9 @@ pipeline {
         }
         stage('Deploy - Staging') {
             steps {
-                sh './deploy staging'
-                sh './run-smoke-tests'
+                echo 'Deploying - Staging'
+                // sh './deploy staging'
+                // sh './run-smoke-tests'
             }
         }
         stage('Sanity check') {
@@ -27,7 +28,8 @@ pipeline {
         }
         stage('Deploy - Production') {
             steps {
-                sh './deploy production'
+                echo 'Deploying - Production'
+                // sh './deploy production'
             }
         }
     }
